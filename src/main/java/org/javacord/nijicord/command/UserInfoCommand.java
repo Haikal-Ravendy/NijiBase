@@ -1,12 +1,15 @@
-package org.javacord.examplebot.command;
+package org.javacord.nijicord.command;
 
 import org.javacord.api.entity.activity.Activity;
 import org.javacord.api.entity.message.MessageAuthor;
 import org.javacord.api.entity.message.embed.EmbedBuilder;
+import org.javacord.api.entity.permission.Role;
 import org.javacord.api.event.message.MessageCreateEvent;
 import org.javacord.api.exception.MissingPermissionsException;
 import org.javacord.api.listener.message.MessageCreateListener;
 import org.javacord.api.util.logging.ExceptionLogger;
+
+import java.util.function.Consumer;
 
 public class UserInfoCommand implements MessageCreateListener {
 
@@ -26,6 +29,7 @@ public class UserInfoCommand implements MessageCreateListener {
                     .addField("User Id", author.getIdAsString(), true)
                     .setAuthor(author);
             // Keep in mind that a message author can either be a webhook or a normal user
+
             author.asUser().ifPresent(user -> {
                 embed.addField("Online Status", user.getStatus().getStatusString(), true);
                 embed.addField("Connected Clients", user.getCurrentClients().toString());
