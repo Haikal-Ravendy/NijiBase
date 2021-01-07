@@ -5,54 +5,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d631bd20-ffe2-4f5d-a317-a17f29a540e0" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.circleci/config.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.gitattributes" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/LICENSE.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build.gradle.kts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gradle/wrapper/gradle-wrapper(1).jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gradle/wrapper/gradle-wrapper(1).properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gradle/wrapper/gradle-wrapper.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gradle/wrapper/gradle-wrapper.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gradlew" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gradlew.bat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/javax.ejb.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/javax.jms.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/javax.persistence.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/javax.resource.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/javax.servlet.jsp.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/javax.servlet.jsp.jstl.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/javax.transaction.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/settings.gradle.kts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/javacord/nijicord/Main.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/javacord/nijicord/command/CopyAvatarCommand.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/javacord/nijicord/command/DieCommand.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/javacord/nijicord/command/EightBallCommand.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/javacord/nijicord/command/NijiAddMember.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/javacord/nijicord/command/OptionCommand.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/javacord/nijicord/command/SubmitCommand.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/javacord/nijicord/command/UpdateCommand.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/javacord/nijicord/command/UserInfoCommand.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/javacord/nijicord/command/WhoisCommand.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/javacord/nijicord/db/InsertMemberDB.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/javacord/nijicord/db/MemberDB.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/javacord/nijicord/db/MySQLAdapter.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/javacord/nijicord/db/NicknameDB.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/javacord/nijicord/db/SocialDB.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/javacord/nijicord/db/UpdateDB.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/javacord/nijicord/db/model/InserMemberModel.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/javacord/nijicord/db/model/MemberModel.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/javacord/nijicord/db/model/NicknameModel.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/javacord/nijicord/db/model/SocialModel.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/javacord/nijicord/exception/UnimplementedParameterException.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/javacord/nijicord/spreadsheet/ReadSheets.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/javacord/nijicord/spreadsheet/SheetsCredential.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/javacord/nijicord/spreadsheet/SheetsService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/credentials.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/com/nijicord/nijicord/NijicordApplicationTests.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tokens/StoredCredential" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/javacord/nijicord/command/NijiAddMember.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/javacord/nijicord/command/NijiAddMember.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/javacord/nijicord/command/OptionCommand.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/javacord/nijicord/command/UpdateCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/javacord/nijicord/command/UpdateCommand.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/javacord/nijicord/command/WhoisCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/javacord/nijicord/command/WhoisCommand.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -246,6 +203,7 @@
       <workItem from="1609727201538" duration="32229000" />
       <workItem from="1609811774143" duration="22745000" />
       <workItem from="1609844010292" duration="247000" />
+      <workItem from="1609990009002" duration="1487000" />
     </task>
     <servers />
   </component>
@@ -262,6 +220,7 @@
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />

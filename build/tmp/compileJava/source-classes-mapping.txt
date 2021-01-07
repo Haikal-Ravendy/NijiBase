@@ -40,9 +40,9 @@ org/javacord/nijicord/command/OptionCommand.java
  org.javacord.nijicord.command.OptionCommand
 org/javacord/nijicord/db/NicknameDB.java
  org.javacord.nijicord.db.NicknameDB
-org/javacord/nijicord/Main.java
- org.javacord.nijicord.Main
-org/javacord/nijicord/command/UpdateCommand.java
- org.javacord.nijicord.command.UpdateCommand
 org/javacord/nijicord/db/UpdateDB.java
  org.javacord.nijicord.db.UpdateDB
+org/javacord/nijicord/command/UpdateCommand.java
+ org.javacord.nijicord.command.UpdateCommand
+org/javacord/nijicord/Main.java
+ org.javacord.nijicord.Main

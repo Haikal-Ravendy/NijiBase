@@ -12,6 +12,11 @@ import java.util.List;
 
 public class UpdateCommand implements MessageCreateListener {
 
+    public String getDescription(){
+        return "!update [Liver's name]/[liver's nickname] \n" +
+                "To update the 3D debut status of the liver";
+    }
+
     @Override
     public void onMessageCreate(MessageCreateEvent event) {
         List<List<Role>> role = new ArrayList<>();
@@ -35,9 +40,9 @@ public class UpdateCommand implements MessageCreateListener {
                     String realName = memberDB.getModel(name).get(0).name;
                     event.getChannel().sendMessage("Congratulations " + realName +" for the 3D Debut!");
                 }
-                else{
-                    updateDB.updateDebut(name);
-                }
+//                else{
+//                    updateDB.updateDebut(name);
+//                }
             } catch (SQLException exception) {
                 exception.printStackTrace();
             }

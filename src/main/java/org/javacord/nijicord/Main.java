@@ -43,15 +43,10 @@ public class Main {
 
 
         // Add listeners
-//        api.addMessageCreateListener(new CopyAvatarCommand());
-//        api.addMessageCreateListener(new UserInfoCommand());
-//        api.addMessageCreateListener(new NijiMemberCommand());
         api.addMessageCreateListener(new WhoisCommand());
         api.addMessageCreateListener(new NijiAddMember());
         api.addMessageCreateListener(new SubmitCommand());
         api.addMessageCreateListener(new UpdateCommand());
-//        api.addMessageCreateListener(new DieCommand("!"));
-//        api.addMessageCreateListener(new EightBallCommand());
 
         // Log a message, if the bot joined or left a server
         api.addServerJoinListener(event -> logger.info("Joined server " + event.getServer().getName()));

@@ -18,6 +18,13 @@ public class WhoisCommand implements MessageCreateListener {
     private MemberDB memberDB = new MemberDB();
     private NicknameDB nicknameDB = new NicknameDB();
     private SocialDB socialDB = new SocialDB();
+    
+    public String getDescription(){
+        return "!whois [Liver's name]/[Liver's nickname] \n " +
+                "this command will give you the image and informations" +
+                "of the liver - Ranging from their 3D Debut status, nicknames if there is any," +
+                "to their known social media";
+    }
 
     private List<MemberModel> memberModel(String name) throws SQLException {
         return memberDB.getModel(name);

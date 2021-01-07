@@ -12,6 +12,14 @@ import java.util.List;
 
 public class NijiAddMember implements MessageCreateListener {
 
+    public String getDescription(){
+        return "!add \n" +
+                "Moderator will be DM a google form link to the mod" +
+                " that they are expected to fill. Then, within that DM run !submit  add new liver information" +
+                " to database. \n" +
+                "**WARNING** Within this current version, if there is a mistake while filling the form - You need to redo it from the beginning ";
+    }
+
     @Override
     public void onMessageCreate(MessageCreateEvent event) {
         List<List<Role>> role = new ArrayList<>();
@@ -26,7 +34,8 @@ public class NijiAddMember implements MessageCreateListener {
 
             if (roleName.contains("Moderator")) {
                 if (event.getMessageContent().contains("!add")) {
-                    event.getMessageAuthor().asUser().ifPresent(user -> user.sendMessage("https://forms.gle/ubTmXUAsf646r5Nz9"));
+                    event.getMessageAuthor().asUser().ifPresent(user -> user.sendMessage("https://forms.gle/ubTmXUAsf646r5Nz9 \n" +
+                            "When you are finished, run !submit here"));
                 }
             }
         }
