@@ -20,9 +20,9 @@ public class WhoisCommand implements MessageCreateListener {
     private SocialDB socialDB = new SocialDB();
     
     public String getDescription(){
-        return "!whois [Liver's name]/[Liver's nickname] \n " +
+        return "**!whois [Liver's name]/[Liver's nickname]** \n\n " +
                 "this command will give you the image and informations" +
-                "of the liver - Ranging from their 3D Debut status, nicknames if there is any," +
+                " of the liver - Ranging from their 3D Debut status, nicknames if there is any," +
                 "to their known social media";
     }
 

@@ -13,10 +13,10 @@ import java.util.List;
 public class NijiAddMember implements MessageCreateListener {
 
     public String getDescription(){
-        return "!add \n" +
+        return "**!add** \n\n" +
                 "Moderator will be DM a google form link to the mod" +
                 " that they are expected to fill. Then, within that DM run !submit  add new liver information" +
-                " to database. \n" +
+                " to database. \n\n" +
                 "**WARNING** Within this current version, if there is a mistake while filling the form - You need to redo it from the beginning ";
     }
 

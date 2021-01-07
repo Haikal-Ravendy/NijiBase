@@ -1,48 +1,40 @@
-org/javacord/nijicord/command/EightBallCommand.java
- org.javacord.nijicord.command.EightBallCommand
 org/javacord/nijicord/spreadsheet/SheetsCredential.java
  org.javacord.nijicord.spreadsheet.SheetsCredential
-org/javacord/nijicord/command/NijiAddMember.java
- org.javacord.nijicord.command.NijiAddMember
+org/javacord/nijicord/db/MySQLAdapter.java
+ org.javacord.nijicord.db.MySQLAdapter
+org/javacord/nijicord/db/model/NicknameModel.java
+ org.javacord.nijicord.db.model.NicknameModel
 org/javacord/nijicord/db/model/MemberModel.java
  org.javacord.nijicord.db.model.MemberModel
 org/javacord/nijicord/spreadsheet/SheetsService.java
  org.javacord.nijicord.spreadsheet.SheetsService
-org/javacord/nijicord/db/model/NicknameModel.java
- org.javacord.nijicord.db.model.NicknameModel
-org/javacord/nijicord/command/CopyAvatarCommand.java
- org.javacord.nijicord.command.CopyAvatarCommand
+org/javacord/nijicord/exception/UnimplementedParameterException.java
+ org.javacord.nijicord.exception.UnimplementedParameterException
+org/javacord/nijicord/db/UpdateDB.java
+ org.javacord.nijicord.db.UpdateDB
+org/javacord/nijicord/db/NicknameDB.java
+ org.javacord.nijicord.db.NicknameDB
 org/javacord/nijicord/spreadsheet/ReadSheets.java
  org.javacord.nijicord.spreadsheet.ReadSheets
-org/javacord/nijicord/db/InsertMemberDB.java
- org.javacord.nijicord.db.InsertMemberDB
+org/javacord/nijicord/db/SocialDB.java
+ org.javacord.nijicord.db.SocialDB
 org/javacord/nijicord/db/model/SocialModel.java
  org.javacord.nijicord.db.model.SocialModel
 org/javacord/nijicord/db/model/InserMemberModel.java
  org.javacord.nijicord.db.model.InserMemberModel
-org/javacord/nijicord/command/UserInfoCommand.java
- org.javacord.nijicord.command.UserInfoCommand
-org/javacord/nijicord/exception/UnimplementedParameterException.java
- org.javacord.nijicord.exception.UnimplementedParameterException
-org/javacord/nijicord/command/DieCommand.java
- org.javacord.nijicord.command.DieCommand
-org/javacord/nijicord/command/SubmitCommand.java
- org.javacord.nijicord.command.SubmitCommand
-org/javacord/nijicord/command/WhoisCommand.java
- org.javacord.nijicord.command.WhoisCommand
 org/javacord/nijicord/db/MemberDB.java
  org.javacord.nijicord.db.MemberDB
-org/javacord/nijicord/db/SocialDB.java
- org.javacord.nijicord.db.SocialDB
-org/javacord/nijicord/db/MySQLAdapter.java
- org.javacord.nijicord.db.MySQLAdapter
-org/javacord/nijicord/command/OptionCommand.java
- org.javacord.nijicord.command.OptionCommand
-org/javacord/nijicord/db/NicknameDB.java
- org.javacord.nijicord.db.NicknameDB
-org/javacord/nijicord/db/UpdateDB.java
- org.javacord.nijicord.db.UpdateDB
+org/javacord/nijicord/command/NijiAddMember.java
+ org.javacord.nijicord.command.NijiAddMember
+org/javacord/nijicord/db/InsertMemberDB.java
+ org.javacord.nijicord.db.InsertMemberDB
 org/javacord/nijicord/command/UpdateCommand.java
  org.javacord.nijicord.command.UpdateCommand
+org/javacord/nijicord/command/SubmitCommand.java
+ org.javacord.nijicord.command.SubmitCommand
+org/javacord/nijicord/command/HelpCommand.java
+ org.javacord.nijicord.command.HelpCommand
 org/javacord/nijicord/Main.java
  org.javacord.nijicord.Main
+org/javacord/nijicord/command/WhoisCommand.java
+ org.javacord.nijicord.command.WhoisCommand

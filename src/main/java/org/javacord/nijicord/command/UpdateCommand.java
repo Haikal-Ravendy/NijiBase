@@ -13,7 +13,7 @@ import java.util.List;
 public class UpdateCommand implements MessageCreateListener {
 
     public String getDescription(){
-        return "!update [Liver's name]/[liver's nickname] \n" +
+        return "**!update [Liver's name]/[liver's nickname]** \n\n" +
                 "To update the 3D debut status of the liver";
     }
 

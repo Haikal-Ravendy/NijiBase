@@ -47,6 +47,7 @@ public class Main {
         api.addMessageCreateListener(new NijiAddMember());
         api.addMessageCreateListener(new SubmitCommand());
         api.addMessageCreateListener(new UpdateCommand());
+        api.addMessageCreateListener(new HelpCommand());
 
         // Log a message, if the bot joined or left a server
         api.addServerJoinListener(event -> logger.info("Joined server " + event.getServer().getName()));
