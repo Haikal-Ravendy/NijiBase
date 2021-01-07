@@ -123,13 +123,26 @@ public class WhoisCommand implements MessageCreateListener {
 
                     EmbedBuilder embed2 = new EmbedBuilder()
                             .setTitle(memberModel.name+"'s social media")
-                            .addField("bilibili", dashCheck(socialModel.bilibili))
-                            .addField("YouTube", dashCheck(socialModel.youtube))
-                            .addField("Twitter", dashCheck(socialModel.twitter))
-                            .addField("Twitch",dashCheck(socialModel.twitch))
-                            .addField("Facebook",dashCheck(socialModel.facebook))
-                            .addField("Instagram",dashCheck(socialModel.instagram))
                             .setAuthor(event.getMessageAuthor());
+                    if(!dashCheck(socialModel.bilibili).equalsIgnoreCase("unknown")){
+                        embed2.addField("bilibili", dashCheck(socialModel.bilibili));
+                    }
+                    if(!dashCheck(socialModel.youtube).equalsIgnoreCase("unknown")){
+                        embed2.addField("YouTube", dashCheck(socialModel.youtube));
+                    }
+                    if(!dashCheck(socialModel.twitter).equalsIgnoreCase("unknown")){
+                        embed2.addField("Twitter", dashCheck(socialModel.twitter));
+                    }
+                    if(!dashCheck(socialModel.twitch).equalsIgnoreCase("unknown")){
+                        embed2.addField("Twitch",dashCheck(socialModel.twitch));
+                    }
+                    if(!dashCheck(socialModel.facebook).equalsIgnoreCase("unknown")){
+                        embed2.addField("Facebook",dashCheck(socialModel.facebook));
+                    }
+                    if(!dashCheck(socialModel.instagram).equalsIgnoreCase("unknown")){
+                        embed2.addField("Instagram",dashCheck(socialModel.instagram));
+
+                    }
 
                     event.getChannel().sendMessage(embed)
                             .exceptionally(ExceptionLogger.get(MissingPermissionsException.class));
