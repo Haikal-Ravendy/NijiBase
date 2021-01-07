@@ -5,39 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d631bd20-ffe2-4f5d-a317-a17f29a540e0" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.env" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/javacord/nijicord/BotConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/6.6.1/executionHistory/executionHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.6.1/executionHistory/executionHistory.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/6.6.1/executionHistory/executionHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.6.1/executionHistory/executionHistory.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/6.6.1/fileContent/fileContent.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.6.1/fileContent/fileContent.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/6.6.1/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.6.1/fileHashes/fileHashes.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/6.6.1/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.6.1/fileHashes/fileHashes.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/6.6.1/fileHashes/resourceHashesCache.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.6.1/fileHashes/resourceHashesCache.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/6.6.1/javaCompile/classAnalysis.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.6.1/javaCompile/classAnalysis.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/6.6.1/javaCompile/javaCompile.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.6.1/javaCompile/javaCompile.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/6.6.1/javaCompile/taskHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.6.1/javaCompile/taskHistory.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/outputFiles.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/outputFiles.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/checksums/checksums.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/checksums/checksums.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/checksums/md5-checksums.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/checksums/md5-checksums.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/checksums/sha1-checksums.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/checksums/sha1-checksums.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.name" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.name" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build.gradle.kts" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle.kts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/org/javacord/nijicord/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/org/javacord/nijicord/Main.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/org/javacord/nijicord/db/MySQLAdapter.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/org/javacord/nijicord/db/MySQLAdapter.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/tmp/compileJava/source-classes-mapping.txt" beforeDir="false" afterPath="$PROJECT_DIR$/build/tmp/compileJava/source-classes-mapping.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/javacord/nijicord/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/javacord/nijicord/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/javacord/nijicord/command/HelpCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/javacord/nijicord/command/HelpCommand.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/javacord/nijicord/command/WhoisCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/javacord/nijicord/command/WhoisCommand.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/javacord/nijicord/db/InsertMemberDB.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/javacord/nijicord/db/InsertMemberDB.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/javacord/nijicord/db/MemberDB.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/javacord/nijicord/db/MemberDB.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/javacord/nijicord/db/MySQLAdapter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/javacord/nijicord/db/MySQLAdapter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/javacord/nijicord/db/NicknameDB.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/javacord/nijicord/db/NicknameDB.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/javacord/nijicord/db/SocialDB.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/javacord/nijicord/db/SocialDB.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/javacord/nijicord/db/UpdateDB.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/javacord/nijicord/db/UpdateDB.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/javacord/nijicord/spreadsheet/ReadSheets.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/javacord/nijicord/spreadsheet/ReadSheets.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -141,6 +109,17 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
+      <option name="arquillianRunConfiguration">
+        <value>
+          <option name="containerStateName" value="" />
+        </value>
+      </option>
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="NijiCord [assemble]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
@@ -240,7 +219,7 @@
       <workItem from="1609844010292" duration="247000" />
       <workItem from="1609990009002" duration="5555000" />
       <workItem from="1609996935782" duration="3427000" />
-      <workItem from="1610001000451" duration="3997000" />
+      <workItem from="1610001000451" duration="6939000" />
     </task>
     <servers />
   </component>
