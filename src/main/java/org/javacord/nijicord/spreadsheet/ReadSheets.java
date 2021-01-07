@@ -2,6 +2,8 @@ package org.javacord.nijicord.spreadsheet;
 
 import com.google.api.services.sheets.v4.Sheets;
 import com.google.api.services.sheets.v4.model.ValueRange;
+import io.github.cdimascio.dotenv.Dotenv;
+import org.javacord.nijicord.BotConfig;
 
 import java.io.IOException;
 import java.security.GeneralSecurityException;
@@ -49,7 +51,8 @@ public class ReadSheets {
         }
         return null;
     }
-    private String SPREADSHEETS_ID = "1OWCkAiYKJEJxc58C9ckd1vLpklrOtfMeN4i6BucwiTU";
+    private BotConfig botConfig = new BotConfig();
+    private String SPREADSHEETS_ID = botConfig.SheetsToken();
     public List<String> getSheetsData(String data) throws IOException, GeneralSecurityException {
         List<String> result = new ArrayList<>();
         SheetsService sheetsService = new SheetsService();

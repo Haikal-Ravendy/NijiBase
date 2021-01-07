@@ -3,6 +3,7 @@ package org.javacord.nijicord.db;
 import com.mysql.jdbc.jdbc2.optional.MysqlConnectionPoolDataSource;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
+import org.javacord.nijicord.BotConfig;
 import org.javacord.nijicord.Main;
 import org.javacord.nijicord.exception.UnimplementedParameterException;
 
@@ -41,10 +42,12 @@ public class MySQLAdapter {
             return dataSource.getConnection();
         } catch (SQLException e) {
             System.out.println(e.getMessage());
-            Main.logger.error("Can't connect to the database! Make sure the database settings are corrent and the database server is running AND the database `" + DB_NAME + "` exists");
+            //Main.logger.error("Can't connect to the database! Make sure the database settings are corrent and the database server is running AND the database `" + DB_NAME + "` exists");
         }
         return null;
     }
+
+
 
     public Connection getConnection() {
         if (c == null) {
@@ -75,6 +78,8 @@ public class MySQLAdapter {
         catch (Exception e){
             throw new Error("Problem "+ e);
         }
+
+        System.err.println(query);
         return query.executeQuery();
 
     }

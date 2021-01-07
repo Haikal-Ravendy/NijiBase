@@ -23,7 +23,6 @@ public class HelpCommand implements MessageCreateListener {
 
     @Override
     public void onMessageCreate(MessageCreateEvent event) {
-        System.err.println(event.getMessageContent());
         if(event.getMessageContent().contains("!help")){
             String[] message = event.getMessageContent().split("!help");
             if(message.length == 0){

@@ -74,11 +74,11 @@ public class WhoisCommand implements MessageCreateListener {
         return stringBuilder.toString();
     }
 
-    private String nameList(String name) throws SQLException {
+    private String nameList(String name, int size) throws SQLException {
         StringBuilder str = new StringBuilder();
         List<MemberModel> memberModels = memberModel(name);
         int i = 1;
-        if (memberModels.size() < 5) {
+        if (memberModels.size() < 5 && size>1) {
             for (MemberModel e : memberModels) {
                 str.append(i + ". " + e.name + " (" + e.branch + ") \n");
                 i++;
@@ -108,7 +108,7 @@ public class WhoisCommand implements MessageCreateListener {
             try {
                 List<MemberModel> memberModels = memberModel(name);
 
-                if(memberModels.size() ==1){
+                if(memberModels.size() ==1 && name.length()>1){
                     MemberModel memberModel = memberModels.get(0);
                     SocialModel socialModel = socialModels(memberModel.name).get(0);
                     EmbedBuilder embed = new EmbedBuilder()
@@ -139,7 +139,7 @@ public class WhoisCommand implements MessageCreateListener {
                 else if(memberModels.size()>1){
                     EmbedBuilder embed = new EmbedBuilder()
                             .setTitle("**__Which liver that you are looking for?__** ")
-                            .setDescription(nameList(name));
+                            .setDescription(nameList(name, name.length()));
                     event.getChannel().sendMessage(embed)
                             .exceptionally(ExceptionLogger.get(MissingPermissionsException.class));
                 }

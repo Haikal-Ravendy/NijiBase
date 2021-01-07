@@ -1,5 +1,6 @@
 package org.javacord.nijicord.db;
 
+import org.javacord.nijicord.BotConfig;
 import org.javacord.nijicord.db.model.MemberModel;
 
 import java.sql.ResultSet;
@@ -8,7 +9,8 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class UpdateDB {
-    private MySQLAdapter sqlAdapter = new MySQLAdapter("localhost", 3307, "root","","nijibase");
+    private BotConfig botConfig = new BotConfig();
+    private MySQLAdapter sqlAdapter = new MySQLAdapter(botConfig.Server(), botConfig.Port(), botConfig.user(), botConfig.password(), botConfig.DB());
 
     private static MemberModel fillRecord(ResultSet resultSet) throws SQLException {
         MemberModel member = new MemberModel();

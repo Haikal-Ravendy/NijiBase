@@ -1,6 +1,7 @@
 package org.javacord.nijicord.db;
 
 
+import org.javacord.nijicord.BotConfig;
 import org.javacord.nijicord.db.model.MemberModel;
 
 import java.sql.ResultSet;
@@ -9,7 +10,8 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class MemberDB {
-    private MySQLAdapter sqlAdapter = new MySQLAdapter("localhost", 3307, "root","","nijibase");
+    private BotConfig botConfig = new BotConfig();
+    private MySQLAdapter sqlAdapter = new MySQLAdapter(botConfig.Server(), botConfig.Port(), botConfig.user(), botConfig.password(), botConfig.DB());
 
     private static MemberModel fillRecord(ResultSet resultSet) throws SQLException {
         MemberModel member = new MemberModel();
@@ -25,19 +27,19 @@ public class MemberDB {
 
         if(getModelFromName(name.trim()).size() > 0){
             List<MemberModel> list = getModelFromName(name.trim());
-            String input =null;
+            List<MemberModel> virtualReal = new ArrayList<>();
             boolean flag = false;
             for(MemberModel m : list){
                 if(m.branch.equalsIgnoreCase("VirtuaReal")){
                     flag = true;
-                    input= m.name;
+                    virtualReal.add(m);
                 }
             }
             if(!flag) {
                 return list;
             }
             else {
-                return getModelForSingular(input);
+                return virtualReal;
             }
 
         }
