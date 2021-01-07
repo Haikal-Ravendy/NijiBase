@@ -51,8 +51,8 @@ public class ReadSheets {
         }
         return null;
     }
-    private BotConfig botConfig = new BotConfig();
-    private String SPREADSHEETS_ID = botConfig.SheetsToken();
+
+    private String SPREADSHEETS_ID = BotConfig.SheetsToken();
     public List<String> getSheetsData(String data) throws IOException, GeneralSecurityException {
         List<String> result = new ArrayList<>();
         SheetsService sheetsService = new SheetsService();

@@ -12,8 +12,7 @@ import java.sql.SQLException;
 import java.util.*;
 
 public class InsertMemberDB {
-    private BotConfig botConfig = new BotConfig();
-    private MySQLAdapter sqlAdapter = new MySQLAdapter(botConfig.Server(), botConfig.Port(), botConfig.user(), botConfig.password(), botConfig.DB());
+    private MySQLAdapter sqlAdapter = new MySQLAdapter(BotConfig.Server(), BotConfig.Port(), BotConfig.user(), BotConfig.password(), BotConfig.DB());
 
     private static InserMemberModel fillRecordTOPMember(ResultSet resultSet) throws SQLException {
         InserMemberModel insModel = new InserMemberModel();

@@ -5,6 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d631bd20-ffe2-4f5d-a317-a17f29a540e0" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.env.example" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/6.6.1/executionHistory/executionHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.6.1/executionHistory/executionHistory.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/6.6.1/executionHistory/executionHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.6.1/executionHistory/executionHistory.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/6.6.1/fileContent/fileContent.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.6.1/fileContent/fileContent.lock" afterDir="false" />
@@ -15,8 +16,23 @@
       <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/checksums/checksums.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/checksums/checksums.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/org/javacord/nijicord/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/org/javacord/nijicord/Main.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/classes/java/main/org/javacord/nijicord/command/WhoisCommand.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/org/javacord/nijicord/command/WhoisCommand.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/javacord/nijicord/command/WhoisCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/javacord/nijicord/command/WhoisCommand.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/org/javacord/nijicord/db/InsertMemberDB.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/org/javacord/nijicord/db/InsertMemberDB.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/org/javacord/nijicord/db/MemberDB.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/org/javacord/nijicord/db/MemberDB.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/org/javacord/nijicord/db/NicknameDB.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/org/javacord/nijicord/db/NicknameDB.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/org/javacord/nijicord/db/SocialDB.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/org/javacord/nijicord/db/SocialDB.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/org/javacord/nijicord/db/UpdateDB.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/org/javacord/nijicord/db/UpdateDB.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/org/javacord/nijicord/spreadsheet/ReadSheets.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/org/javacord/nijicord/spreadsheet/ReadSheets.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/compileJava/source-classes-mapping.txt" beforeDir="false" afterPath="$PROJECT_DIR$/build/tmp/compileJava/source-classes-mapping.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/javacord/nijicord/BotConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/javacord/nijicord/BotConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/javacord/nijicord/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/javacord/nijicord/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/javacord/nijicord/db/InsertMemberDB.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/javacord/nijicord/db/InsertMemberDB.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/javacord/nijicord/db/MemberDB.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/javacord/nijicord/db/MemberDB.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/javacord/nijicord/db/NicknameDB.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/javacord/nijicord/db/NicknameDB.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/javacord/nijicord/db/SocialDB.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/javacord/nijicord/db/SocialDB.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/javacord/nijicord/db/UpdateDB.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/javacord/nijicord/db/UpdateDB.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/javacord/nijicord/spreadsheet/ReadSheets.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/javacord/nijicord/spreadsheet/ReadSheets.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -230,7 +246,7 @@
       <workItem from="1609844010292" duration="247000" />
       <workItem from="1609990009002" duration="5555000" />
       <workItem from="1609996935782" duration="3427000" />
-      <workItem from="1610001000451" duration="8881000" />
+      <workItem from="1610001000451" duration="9892000" />
     </task>
     <task id="LOCAL-00001" summary="reconfigure env">
       <created>1610013028655</created>
@@ -239,7 +255,14 @@
       <option name="project" value="LOCAL" />
       <updated>1610013028656</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Hide unknown liver's social media information">
+      <created>1610015555268</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1610015555268</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -260,7 +283,8 @@
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <MESSAGE value="reconfigure env" />
-    <option name="LAST_COMMIT_MESSAGE" value="reconfigure env" />
+    <MESSAGE value="Hide unknown liver's social media information" />
+    <option name="LAST_COMMIT_MESSAGE" value="Hide unknown liver's social media information" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

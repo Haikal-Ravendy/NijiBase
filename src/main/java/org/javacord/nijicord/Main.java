@@ -34,10 +34,9 @@ public class Main {
 
 
         // The token is the first argument of the program
-        String token = botConfig.DiscordToken();
 
         // We login blocking, just because it is simpler and doesn't matter here
-        DiscordApi api = new DiscordApiBuilder().setToken(token).login().join();
+        DiscordApi api = new DiscordApiBuilder().setToken(BotConfig.DiscordToken()).login().join();
 
         // Print the invite url of the bot
         //logger.info("You can invite me by using the following url: " + api.createBotInvite());
