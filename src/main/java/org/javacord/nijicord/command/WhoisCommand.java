@@ -121,33 +121,43 @@ public class WhoisCommand implements MessageCreateListener {
                             .setImage(memberModel.visual)
                             .setAuthor(event.getMessageAuthor());
 
+                    boolean flag = false;
+
                     EmbedBuilder embed2 = new EmbedBuilder()
                             .setTitle(memberModel.name+"'s social media")
                             .setAuthor(event.getMessageAuthor());
                     if(!dashCheck(socialModel.bilibili).equalsIgnoreCase("unknown")){
                         embed2.addField("bilibili", dashCheck(socialModel.bilibili));
+                        flag = true;
                     }
                     if(!dashCheck(socialModel.youtube).equalsIgnoreCase("unknown")){
                         embed2.addField("YouTube", dashCheck(socialModel.youtube));
+                        flag = true;
                     }
                     if(!dashCheck(socialModel.twitter).equalsIgnoreCase("unknown")){
                         embed2.addField("Twitter", dashCheck(socialModel.twitter));
+                        flag = true;
                     }
                     if(!dashCheck(socialModel.twitch).equalsIgnoreCase("unknown")){
                         embed2.addField("Twitch",dashCheck(socialModel.twitch));
+                        flag = true;
                     }
                     if(!dashCheck(socialModel.facebook).equalsIgnoreCase("unknown")){
                         embed2.addField("Facebook",dashCheck(socialModel.facebook));
+                        flag = true;
                     }
                     if(!dashCheck(socialModel.instagram).equalsIgnoreCase("unknown")){
                         embed2.addField("Instagram",dashCheck(socialModel.instagram));
+                        flag = true;
 
                     }
 
                     event.getChannel().sendMessage(embed)
                             .exceptionally(ExceptionLogger.get(MissingPermissionsException.class));
-                    event.getChannel().sendMessage(embed2)
-                            .exceptionally(ExceptionLogger.get(MissingPermissionsException.class));
+                    if(flag) {
+                        event.getChannel().sendMessage(embed2)
+                                .exceptionally(ExceptionLogger.get(MissingPermissionsException.class));
+                    }
                 }
                 else if(memberModels.size()>1){
                     EmbedBuilder embed = new EmbedBuilder()

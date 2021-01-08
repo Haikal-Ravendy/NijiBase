@@ -16,6 +16,8 @@ public class MemberDB {
         MemberModel member = new MemberModel();
         member.name =resultSet.getString("name");
         member.branch = resultSet.getString("branch");
+        member.social_media = resultSet.getInt("social_media");
+        member.nick = resultSet.getInt("nick");
         member.debut_3d = resultSet.getString("debut");
         member.visual = resultSet.getString("visual");
         member.illustrator = resultSet.getString("illustrator");
@@ -71,7 +73,9 @@ public class MemberDB {
                 "m.visual," +
                 "m.branch, " +
                 "m.illustrator, " +
-                "m.debut3D AS debut " +
+                "m.debut3D AS debut, " +
+                "m.social_media, " +
+                "m.nick " +
                 "FROM " +
                 "member_list as m, " +
                 "nickname AS n " +
@@ -90,7 +94,7 @@ public class MemberDB {
     private List<MemberModel> getModelForSingular(String test) throws SQLException {
 
         List<MemberModel> result = new ArrayList<>();
-        String sql = "select distinct m.name,m.visual, m.branch, m.illustrator,m.debut3D AS debut FROM member_list as m WHERE m.name=?";
+        String sql = "select distinct m.name,m.visual, m.branch, m.illustrator,m.debut3D AS debut, m.social_media, m.nick FROM member_list as m WHERE m.name=?";
 
         ResultSet ret= sqlAdapter.select(
                 sql, 2,test
@@ -104,7 +108,7 @@ public class MemberDB {
     public List<MemberModel> getModelFromName(String test) throws SQLException {
         
         List<MemberModel> result = new ArrayList<>();
-        String sql = "select distinct m.name,m.visual, m.branch, m.illustrator,m.debut3D AS debut FROM member_list as m WHERE m.name LIKE ?";
+        String sql = "select distinct m.name,m.visual, m.branch, m.illustrator,m.debut3D AS debut, m.social_media, m.nick FROM member_list as m WHERE m.name LIKE ?";
 
         ResultSet ret= sqlAdapter.select(
                 sql, 1,test
@@ -115,6 +119,27 @@ public class MemberDB {
 
         return result;
 
+    }
+
+    public void delete(int socialID, int nickID, String target) throws SQLException {
+        if(target.equalsIgnoreCase("member_list")) {
+            String sql = "DELETE FROM member_list WHERE social_media = ? AND nick = ?";
+            int resultSet = sqlAdapter.query(
+                    sql, 2,  socialID, nickID
+            );
+        }
+        if(target.equalsIgnoreCase("nickname")) {
+            String sql = "DELETE FROM nickname WHERE nick_id = ?";
+            int resultSet = sqlAdapter.query(
+                    sql, 2,nickID
+            );
+        }
+        if(target.equalsIgnoreCase("social")) {
+            String sql = "DELETE FROM social WHERE social_ID = ?";
+            int resultSet = sqlAdapter.query(
+                    sql, 2, socialID
+            );
+        }
     }
 
 

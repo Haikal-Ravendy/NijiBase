@@ -1,19 +1,10 @@
 package org.javacord.nijicord.db;
 
 import org.javacord.nijicord.BotConfig;
-import org.javacord.nijicord.db.model.MemberModel;
-
-import java.sql.ResultSet;
 import java.sql.SQLException;
 
 public class UpdateDB {
-    private MySQLAdapter sqlAdapter = new MySQLAdapter(BotConfig.Server(), BotConfig.Port(), BotConfig.user(), BotConfig.password(), BotConfig.DB());
-
-    private static MemberModel fillRecord(ResultSet resultSet) throws SQLException {
-        MemberModel member = new MemberModel();
-        member.debut_3d = resultSet.getString("debut");
-        return member;
-    }
+    private final MySQLAdapter sqlAdapter = new MySQLAdapter(BotConfig.Server(), BotConfig.Port(), BotConfig.user(), BotConfig.password(), BotConfig.DB());
 
     private String debut3DChecker(String name) throws SQLException {
         MemberDB db = new MemberDB();

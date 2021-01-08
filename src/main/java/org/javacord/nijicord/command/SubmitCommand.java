@@ -21,7 +21,7 @@ public class SubmitCommand implements MessageCreateListener {
                 insertMemberDB.insertMember("nickname");
                 insertMemberDB.insertMember("social");
 
-                event.editMessage("**FINISHED**");
+                event.getChannel().sendMessage("FINISHED");
 
             }
 

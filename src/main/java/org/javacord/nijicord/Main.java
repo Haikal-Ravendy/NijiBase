@@ -48,6 +48,7 @@ public class Main {
         api.addMessageCreateListener(new SubmitCommand());
         api.addMessageCreateListener(new UpdateCommand());
         api.addMessageCreateListener(new HelpCommand());
+        api.addMessageCreateListener(new DeleteCommand());
 
         // Log a message, if the bot joined or left a server
         //api.addServerJoinListener(event -> logger.info("Joined server " + event.getServer().getName()));
