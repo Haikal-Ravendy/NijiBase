@@ -29,7 +29,7 @@ public class UpdateCommand implements MessageCreateListener {
                 }
             }
         }
-        if(event.getMessageContent().contains("!update")&& roleName.contains("Moderator")){
+        if(event.getMessageContent().toLowerCase().startsWith("!update")&& roleName.contains("Moderator")){
             String name = event.getMessageContent().split("!update")[1].trim();
             UpdateDB updateDB = new UpdateDB();
             MemberDB memberDB = new MemberDB();

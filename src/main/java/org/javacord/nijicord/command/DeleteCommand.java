@@ -22,7 +22,7 @@ public class DeleteCommand implements MessageCreateListener {
             }
         }
         if(roleName.contains("Moderator")){
-            if(event.getMessageContent().contains("!delete")){
+            if(event.getMessageContent().toLowerCase().startsWith("!delete")){
                 String name = event.getMessageContent().split("!delete")[1].trim();
                 System.err.println(name);
                 MemberDB memberDB = new MemberDB();

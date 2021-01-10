@@ -33,7 +33,7 @@ public class NijiAddMember implements MessageCreateListener {
             }
 
             if (roleName.contains("Moderator")) {
-                if (event.getMessageContent().contains("!add")) {
+                if (event.getMessageContent().toLowerCase().startsWith("!add")) {
                     event.getMessageAuthor().asUser().ifPresent(user -> user.sendMessage("https://forms.gle/ubTmXUAsf646r5Nz9 \n" +
                             "When you are finished, run !submit here"));
                 }

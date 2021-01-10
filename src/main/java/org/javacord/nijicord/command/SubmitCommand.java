@@ -14,7 +14,7 @@ public class SubmitCommand implements MessageCreateListener {
     @Override
     public void onMessageCreate(MessageCreateEvent event) {
         try {
-            if(event.getMessageContent().contains("!submit") && event.getMessageContent().split("!submit").length==0 && event.getMessage().isPrivateMessage()) {
+            if(event.getMessageContent().toLowerCase().startsWith("!submit") && event.getMessage().isPrivateMessage()) {
                 event.getChannel().sendMessage("This should take a while");
                 InsertMemberDB insertMemberDB = new InsertMemberDB();
                 insertMemberDB.insertMember("member");

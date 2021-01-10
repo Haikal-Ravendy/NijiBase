@@ -23,7 +23,7 @@ public class HelpCommand implements MessageCreateListener {
 
     @Override
     public void onMessageCreate(MessageCreateEvent event) {
-        if(event.getMessageContent().contains("!help")){
+        if(event.getMessageContent().toLowerCase().startsWith("!help")){
             String[] message = event.getMessageContent().split("!help");
             if(message.length == 0){
                 EmbedBuilder embed = new EmbedBuilder()

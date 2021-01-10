@@ -102,7 +102,7 @@ public class WhoisCommand implements MessageCreateListener {
 
     @Override
     public void onMessageCreate(MessageCreateEvent event) {
-        if(event.getMessageContent().contains("!whois")){
+        if(event.getMessageContent().toLowerCase().startsWith("!whois")){
             String name = event.getMessageContent().split("!whois")[1].trim();
 
             try {
