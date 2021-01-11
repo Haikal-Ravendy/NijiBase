@@ -31,7 +31,7 @@ public class MemberDB {
             List<MemberModel> virtualReal = new ArrayList<>();
             boolean flag = false;
             for(MemberModel m : list){
-                if(m.branch.equalsIgnoreCase("VirtuaReal")){
+                if(m.branch.equalsIgnoreCase("VirtuaReal") || m.name.equalsIgnoreCase("Eru")){
                     flag = true;
                     virtualReal.add(m);
                 }
@@ -49,10 +49,11 @@ public class MemberDB {
 
             boolean flag = false;
             for(MemberModel m : list){
-                if(m.branch.equalsIgnoreCase("VirtuaReal")){
+                if(m.branch.equalsIgnoreCase("VirtuaReal") || m.name.equalsIgnoreCase("Eru") ){
                     flag = true;
                 }
             }
+
             if(!flag) {
                 return list;
             }

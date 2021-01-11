@@ -43,6 +43,7 @@ public class Main {
 
 
         // Add listeners
+        System.err.println(api.createBotInvite());
         api.addMessageCreateListener(new WhoisCommand());
         api.addMessageCreateListener(new NijiAddMember());
         api.addMessageCreateListener(new SubmitCommand());
