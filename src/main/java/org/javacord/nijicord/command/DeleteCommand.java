@@ -11,6 +11,10 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class DeleteCommand implements MessageCreateListener {
+    public String getDetail(){
+        return "**!delete [name/nickname]**\n\n" +
+                "To delete a liver's information";
+    }
     @Override
     public void onMessageCreate(MessageCreateEvent event) {
         List<List<Role>> role = new ArrayList<>();

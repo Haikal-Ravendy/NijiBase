@@ -60,18 +60,6 @@ public class InsertMemberDB {
             }
         }
     }
-//    public void nullChecker(Object... param){
-//
-//        for(Object p : param){
-//            if(p instanceof List){
-//                for(int j =0 ; j<((List<?>) p).size(); j++){
-//                    if(((List<?>) p).get(j).equals("-")){
-//                        ((List<?>) p).set(j,null);
-//                    }
-//                }
-//            }
-//        }
-//    }
 
     public List<Integer> boolConvert(List<String> debut){
         List<Integer> res = new ArrayList<>();
@@ -125,7 +113,6 @@ public class InsertMemberDB {
     }
 
     public List<String> nickList(String nick){
-        System.err.println(nick);
         List<String> result = new ArrayList<>();
         String[] nicks = nick.split("/");
         for(int i = 0 ; i<nicks.length ; i++){

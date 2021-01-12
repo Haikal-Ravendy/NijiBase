@@ -18,6 +18,10 @@ public class HelpCommand implements MessageCreateListener {
             WhoisCommand whoisCommand = new WhoisCommand();
             return whoisCommand.getDescription();
         }
+        else if(command.equalsIgnoreCase("delete")) {
+            DeleteCommand deleteCommand = new DeleteCommand();
+            return deleteCommand.getDetail();
+        }
         return null;
     }
 
@@ -33,7 +37,8 @@ public class HelpCommand implements MessageCreateListener {
                                 "\n\n" +
                                 "**__Moderator only__** \n" +
                                 "1. update - to update 3D debut status \n" +
-                                "2. Add - to add new liver's information");
+                                "2. add - to add new liver's information \n" +
+                                "3. delete - to delete liver ");
                 event.getChannel().sendMessage(embed);
             }
             else {
