@@ -183,7 +183,6 @@ public class InsertMemberDB {
             int resultSet = sqlAdapter.insert(
                     memberSQL,2,name.get(i-1),branch.get(i-1),debutConverted.get(i-1),id,id,illustrator.get(i-1),visual.get(i-1)
             );
-            System.err.println(resultSet);
 
         }
         if(target.equalsIgnoreCase("nickname")) {
@@ -194,7 +193,6 @@ public class InsertMemberDB {
                 int i = amount - 1;
                 int nick = nickID(name.get(i));
                 List<String> nicks = nickList(nickname.get(i));
-                System.err.println(nicks.size());
                 int j = 0;
                 for(String nck : nicks) {
                     int resultSet = sqlAdapter.insert(
