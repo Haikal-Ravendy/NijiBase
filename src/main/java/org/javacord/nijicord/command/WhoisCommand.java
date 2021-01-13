@@ -13,6 +13,7 @@ import org.javacord.nijicord.db.model.NicknameModel;
 import org.javacord.nijicord.db.model.SocialModel;
 
 import java.sql.SQLException;
+import java.util.ArrayList;
 import java.util.List;
 public class WhoisCommand implements MessageCreateListener {
     private MemberDB memberDB = new MemberDB();
@@ -55,7 +56,7 @@ public class WhoisCommand implements MessageCreateListener {
 
     private String nickBuilder(String name) throws SQLException {
         List<NicknameModel> nicknameModels = nicknameModels(name);
-        String namaMember = memberModel(name).get(0).name;
+        String namaMember = name;
         StringBuilder stringBuilder = new StringBuilder();
         int i = 1;
         if(nicknameModels.size()!=0){
@@ -99,6 +100,21 @@ public class WhoisCommand implements MessageCreateListener {
         }
         return target;
     }
+    
+    private List<MemberModel> oneNameChecker(List<MemberModel> memberModels, String target){
+        List<MemberModel> models = new ArrayList<>();
+        for(MemberModel m : memberModels){
+            if(m.name.equalsIgnoreCase(target)){
+                models.add(m);
+            }
+        }
+        if(models.size()!=0){
+            return models;
+        }
+        else {
+            return memberModels;
+        }
+    }
 
     @Override
     public void onMessageCreate(MessageCreateEvent event) {
@@ -106,7 +122,7 @@ public class WhoisCommand implements MessageCreateListener {
             String name = event.getMessageContent().split("!whois")[1].trim();
 
             try {
-                List<MemberModel> memberModels = memberModel(name);
+                List<MemberModel> memberModels = oneNameChecker(memberModel(name),name);
 
                 if(memberModels.size() ==1 && name.length()>1){
                     MemberModel memberModel = memberModels.get(0);
@@ -117,7 +133,7 @@ public class WhoisCommand implements MessageCreateListener {
                             .addField("Branch", memberModel.branch, true)
                             .addField("3D Debut", memberModel.debut_3d.equalsIgnoreCase("1")?"yes":"no", true)
                             .addField("Illustrator",IllustChecker(name), true)
-                            .addField("Nickname",nickBuilder(name), false)
+                            .addField("Nickname",nickBuilder(memberModel.name), false)
                             .setImage(memberModel.visual)
                             .setAuthor(event.getMessageAuthor());
 

@@ -26,8 +26,6 @@ public class SocialDB {
 
     public List<SocialModel> getModel(String name) throws SQLException{
         List<SocialModel> result = new ArrayList<>();
-        MemberDB memberDB = new MemberDB();
-        List<MemberModel> memberModels = memberDB.getModel(name);
         String sql =
                 "select " +
                         "s.youtube," +
@@ -37,10 +35,10 @@ public class SocialDB {
                         "s.instagram," +
                         "s.twitch " +
                         "FROM member_list as m, social AS s " +
-                        "WHERE s.social_id = m.social_media AND m.name LIKE ?";
+                        "WHERE s.social_id = m.social_media AND m.name=?";
 
         ResultSet ret= sqlAdapter.select(
-                sql,1, memberModels.get(0).name
+                sql,2, name
         );
         while (ret.next()){
             result.add(fillRecord(ret));

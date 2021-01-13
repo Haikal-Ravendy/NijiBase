@@ -20,12 +20,10 @@ public class NicknameDB {
 
     public List<NicknameModel> getModel(String name) throws SQLException{
         List<NicknameModel> result = new ArrayList<>();
-        MemberDB memberDB = new MemberDB();
-        List<MemberModel> memberModels = memberDB.getModel(name);
         String sql = "select n.nickname FROM member_list as m, nickname AS n WHERE n.nick_id = m.nick AND m.name= ?";
 
         ResultSet ret= sqlAdapter.select(
-                sql,2, memberModels.get(0).name
+                sql,2, name
         );
         while (ret.next()){
             result.add(fillRecord(ret));
