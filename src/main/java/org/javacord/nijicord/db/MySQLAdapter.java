@@ -79,7 +79,6 @@ public class MySQLAdapter {
             throw new Error("Problem "+ e);
         }
 
-        System.err.println(query);
         return query.executeQuery();
 
     }

@@ -25,30 +25,16 @@ public class InsertMemberDB {
         insModel.topNick = resultSet.getInt("top");
         return insModel;
     }
-    private static InserMemberModel fillRecordTOPSocial(ResultSet resultSet) throws SQLException {
-        InserMemberModel insModel = new InserMemberModel();
-        insModel.topSocial = resultSet.getInt("top");
-        return insModel;
-    }
-
-    private static InserMemberModel fillRecordNICK(ResultSet resultSet) throws SQLException {
-        InserMemberModel insModel = new InserMemberModel();
-        insModel.nick = resultSet.getInt("nick");
-        return insModel;
-    }
-
 
     public InsertMemberDB() throws IOException, GeneralSecurityException {
     }
 
     public int size(Object... param){
         List<Integer> size = new ArrayList<>();
-        int index = 1;
         for(Object p : param){
             if(p instanceof List){
                 size.add(((List<?>) p).size());
             }
-            index++;
         }
         return Collections.max(size);
     }
@@ -99,19 +85,6 @@ public class InsertMemberDB {
         return result.get(0).topMember;
     }
 
-    public int nickID(String name) throws SQLException {
-        System.err.println(name);
-        String sql = "SELECT m.nick FROM member_list AS m WHERE m.name LIKE ?";
-        List<InserMemberModel> result = new ArrayList<>();
-        ResultSet ret= sqlAdapter.select(
-                sql,2, name
-        );
-        while (ret.next()){
-            result.add(fillRecordNICK(ret));
-        }
-        return result.get(0).nick;
-    }
-
     public List<String> nickList(String nick){
         List<String> result = new ArrayList<>();
         String[] nicks = nick.split("/");
@@ -154,19 +127,16 @@ public class InsertMemberDB {
 
         int amount = size(name,branch,debut,illustrator,visual,nickname,youtube,bilibil, twitter, twitch
                 ,instagram,facebook);
-//        nullChecker(amount,name,branch,debut,illustrator,visual,nickname,youtube,bilibil, twitter, twitch
-//                ,instagram,facebook);
         List<Integer> debutConverted = boolConvert(debut);
-        System.err.println(cekList(youtube));
+        int id = lastID()+1;
 
 
 
         if(target.equalsIgnoreCase("member")){
-            int max = lastID();
+            
             String memberSQL = "INSERT INTO member_list (name,branch,debut3D,nick,social_media,illustrator,visual)\n" +
                     "VALUES (?, ?, ?, ?,?,?,?)";
             int i = amount;
-            int id = max+i;
             int resultSet = sqlAdapter.insert(
                     memberSQL,2,name.get(i-1),branch.get(i-1),debutConverted.get(i-1),id,id,illustrator.get(i-1),visual.get(i-1)
             );
@@ -178,25 +148,27 @@ public class InsertMemberDB {
                 String nicknameSQL = "INSERT INTO nickname (id_real,nick_id, nickname)\n" +
                         "VALUES (?,?,?)";
                 int i = amount - 1;
-                int nick = nickID(name.get(i));
                 List<String> nicks = nickList(nickname.get(i));
-                int j = 0;
                 for(String nck : nicks) {
-                    int resultSet = sqlAdapter.insert(
-                            nicknameSQL,2, maxNick+2+j, nick,nck
-                            );
-                    j++;
+                    if(nck.equalsIgnoreCase("-")) {
+                        break;
+                    }
+                    else {
+                        int resultSet = sqlAdapter.insert(
+                                nicknameSQL,2, maxNick+1, lastID() ,nck
+                        );
+                    }
+
+
                 }
             }
         }
         if(target.equalsIgnoreCase("social")){
             String socialSQL = "INSERT INTO social (social_id,bilibili,facebook,instagram,twitch,twitter,youtube)\n" +
                     "VALUES (?, ?, ?, ?,?,?,?)";
-            int lastID = lastID();
             int i = amount-1;
-            int id = lastID;
             int resultSet = sqlAdapter.insert(
-                    socialSQL,2,id,bilibil.get(i),facebook.get(i),instagram.get(i),twitch.get(i),twitter.get(i),youtube.get(i)
+                    socialSQL,2,lastID(),bilibil.get(i),facebook.get(i),instagram.get(i),twitch.get(i),twitter.get(i),youtube.get(i)
             );
         }
 
