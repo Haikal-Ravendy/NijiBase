@@ -10,7 +10,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class NicknameDB {
-    private MySQLAdapter sqlAdapter = new MySQLAdapter(BotConfig.Server(), BotConfig.Port(), BotConfig.user(), BotConfig.password(), BotConfig.DB());
+    private MySQLAdapter sqlAdapter = new MySQLAdapter();
 
     private static NicknameModel fillRecord(ResultSet resultSet) throws SQLException {
         NicknameModel nick = new NicknameModel();

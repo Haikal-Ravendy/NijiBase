@@ -30,13 +30,12 @@ public class Main {
 
         // Enable debugging, if no slf4j logger was found
         FallbackLoggerConfiguration.setDebug(true);
-        BotConfig botConfig = new BotConfig();
 
 
         // The token is the first argument of the program
 
         // We login blocking, just because it is simpler and doesn't matter here
-        DiscordApi api = new DiscordApiBuilder().setToken(BotConfig.DiscordToken()).login().join();
+        DiscordApi api = new DiscordApiBuilder().setToken(BotConfig.getToken("discord-token")).login().join();
 
         // Print the invite url of the bot
         //logger.info("You can invite me by using the following url: " + api.createBotInvite());

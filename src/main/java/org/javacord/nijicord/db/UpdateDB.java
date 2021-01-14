@@ -4,7 +4,7 @@ import org.javacord.nijicord.BotConfig;
 import java.sql.SQLException;
 
 public class UpdateDB {
-    private final MySQLAdapter sqlAdapter = new MySQLAdapter(BotConfig.Server(), BotConfig.Port(), BotConfig.user(), BotConfig.password(), BotConfig.DB());
+    private final MySQLAdapter sqlAdapter = new MySQLAdapter();
 
     private String debut3DChecker(String name) throws SQLException {
         MemberDB db = new MemberDB();

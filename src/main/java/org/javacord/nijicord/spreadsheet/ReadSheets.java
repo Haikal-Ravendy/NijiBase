@@ -52,7 +52,7 @@ public class ReadSheets {
         return null;
     }
 
-    private String SPREADSHEETS_ID = BotConfig.SheetsToken();
+    private String SPREADSHEETS_ID = "1OWCkAiYKJEJxc58C9ckd1vLpklrOtfMeN4i6BucwiTU";
     public List<String> getSheetsData(String data) throws IOException, GeneralSecurityException {
         List<String> result = new ArrayList<>();
         SheetsService sheetsService = new SheetsService();

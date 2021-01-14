@@ -21,12 +21,12 @@ public class MySQLAdapter {
 
     public static final Logger logger = LogManager.getLogger(MemberDB.class);
 
-    public MySQLAdapter(String server, int port, String databaseUser, String databasePassword, String databaseName) {
-        DB_ADRES = server;
-        DB_USER = databaseUser;
-        DB_PASSWORD = databasePassword;
-        DB_NAME = databaseName;
-        DB_PORT = port;
+    public MySQLAdapter() {
+        DB_ADRES = BotConfig.getToken("server");
+        DB_USER = BotConfig.getToken("dbuser");
+        DB_PASSWORD = BotConfig.getToken("dbpassword");
+        DB_NAME = BotConfig.getToken("database");
+        DB_PORT = Integer.parseInt(BotConfig.getToken("port"));
     }
 
     private Connection createConnection() {

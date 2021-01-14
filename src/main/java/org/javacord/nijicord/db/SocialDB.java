@@ -11,7 +11,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class SocialDB {
-    private MySQLAdapter sqlAdapter = new MySQLAdapter(BotConfig.Server(), BotConfig.Port(), BotConfig.user(), BotConfig.password(), BotConfig.DB());
+    private MySQLAdapter sqlAdapter = new MySQLAdapter();
 
     private static SocialModel fillRecord(ResultSet resultSet) throws SQLException {
         SocialModel social = new SocialModel();
