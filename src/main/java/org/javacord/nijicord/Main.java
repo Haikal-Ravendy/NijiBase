@@ -1,8 +1,5 @@
 package org.javacord.nijicord;
 
-import io.github.cdimascio.dotenv.Dotenv;
-import org.apache.logging.log4j.LogManager;
-import org.apache.logging.log4j.Logger;
 import org.javacord.api.DiscordApi;
 import org.javacord.api.DiscordApiBuilder;
 import org.javacord.api.util.logging.FallbackLoggerConfiguration;
@@ -44,8 +41,7 @@ public class Main {
         // Add listeners
         System.err.println(api.createBotInvite());
         api.addMessageCreateListener(new WhoisCommand());
-        api.addMessageCreateListener(new NijiAddMember());
-        api.addMessageCreateListener(new SubmitCommand());
+        api.addMessageCreateListener(new AddCommand());
         api.addMessageCreateListener(new UpdateCommand());
         api.addMessageCreateListener(new HelpCommand());
         api.addMessageCreateListener(new DeleteCommand());

@@ -7,8 +7,8 @@ import org.javacord.api.listener.message.MessageCreateListener;
 public class HelpCommand implements MessageCreateListener {
     private String help(String command){
         if(command.equalsIgnoreCase("add")) {
-            NijiAddMember nijiAddMember = new NijiAddMember();
-            return nijiAddMember.getDescription();
+            AddCommand addCommand = new AddCommand();
+            return addCommand.getDescription();
         }
         else if(command.equalsIgnoreCase("update")) {
             UpdateCommand updateCommand = new UpdateCommand();

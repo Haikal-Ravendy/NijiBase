@@ -94,11 +94,6 @@ public class InsertMemberDB {
         return result;
     }
 
-
-
-
-
-
     private String cekList(List<String> list){
         StringBuilder str = new StringBuilder();
         for(String e:list){

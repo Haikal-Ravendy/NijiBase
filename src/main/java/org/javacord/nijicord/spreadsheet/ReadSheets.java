@@ -53,6 +53,8 @@ public class ReadSheets {
     }
 
     private String SPREADSHEETS_ID = "1OWCkAiYKJEJxc58C9ckd1vLpklrOtfMeN4i6BucwiTU";
+
+
     public List<String> getSheetsData(String data) throws IOException, GeneralSecurityException {
         List<String> result = new ArrayList<>();
         SheetsService sheetsService = new SheetsService();
@@ -76,5 +78,23 @@ public class ReadSheets {
             }
             return result;
         }
+    }
+    public boolean checker(List<String> name) throws IOException, GeneralSecurityException {
+        int rng = name.size()+1;
+        String range = "C"+rng;
+        SheetsService sheetsService = new SheetsService();
+        Sheets getSheetService = sheetsService.getSheetService();
+        ValueRange response = getSheetService.spreadsheets().values()
+                .get(SPREADSHEETS_ID, range)
+                .execute();
+
+        List<List<Object>> values = response.getValues();
+        if(values == null || values.isEmpty()){
+            return true;
+        }
+        else {
+            return false;
+        }
+
     }
 }

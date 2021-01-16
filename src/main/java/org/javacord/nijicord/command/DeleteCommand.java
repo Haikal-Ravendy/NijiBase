@@ -28,7 +28,6 @@ public class DeleteCommand implements MessageCreateListener {
         if(roleName.contains("Moderator")){
             if(event.getMessageContent().toLowerCase().startsWith("!delete")){
                 String name = event.getMessageContent().split("!delete")[1].trim();
-                System.err.println(name);
                 MemberDB memberDB = new MemberDB();
                 try {
                     List<MemberModel> memberModels = memberDB.getModel(name);
@@ -38,9 +37,7 @@ public class DeleteCommand implements MessageCreateListener {
                     }
                     String deletedName = memberModels.get(0).name;
                     int social = memberModels.get(0).social_media;
-                    System.err.println(social);
                     int nick = memberModels.get(0).nick;
-                    System.err.println(nick);
                     memberDB.delete(social,nick,"member_list");
                     memberDB.delete(social,nick,"nickname");
                     memberDB.delete(social,nick,"social");
