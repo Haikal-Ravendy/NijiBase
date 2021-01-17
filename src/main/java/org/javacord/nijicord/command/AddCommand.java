@@ -54,9 +54,7 @@ public class AddCommand implements MessageCreateListener {
                             event.getMessageAuthor().asUser().ifPresent(user -> user.sendMessage("The process of inputting data to the database has started!" +
                                     "\n This will be taking a while!"));
                             InsertMemberDB insertMemberDB = new InsertMemberDB();
-                            insertMemberDB.insertMember("member");
-                            insertMemberDB.insertMember("nickname");
-                            insertMemberDB.insertMember("social");
+                            insertMemberDB.insertMember();
                             event.getMessageAuthor().asUser().ifPresent(user -> user.sendMessage("The data is succesfully added!"));
                         }
 

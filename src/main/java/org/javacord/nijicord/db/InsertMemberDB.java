@@ -2,13 +2,16 @@ package org.javacord.nijicord.db;
 
 import org.javacord.nijicord.BotConfig;
 import org.javacord.nijicord.db.model.InserMemberModel;
+import org.javacord.nijicord.db.model.MemberModel;
 import org.javacord.nijicord.db.model.NicknameModel;
 import org.javacord.nijicord.spreadsheet.ReadSheets;
 
 import java.io.IOException;
 import java.security.GeneralSecurityException;
+import java.sql.Connection;
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.sql.Savepoint;
 import java.util.*;
 
 public class InsertMemberDB {
@@ -94,15 +97,24 @@ public class InsertMemberDB {
         return result;
     }
 
-    private String cekList(List<String> list){
-        StringBuilder str = new StringBuilder();
-        for(String e:list){
-            str.append(e+"\n");
+    public void insertNick(String name, String nick) throws SQLException {
+        String sql = "INSERT INTO nickname (id_real,nick_id, nickname)\n" +
+        "VALUES (?,?,?)";
+        MemberDB memberDB = new MemberDB();
+        MemberModel memberModel = null;
+        if(memberDB.getModel(name).size() == 1) {
+            memberModel = memberDB.getModel(name).get(0);
         }
-        return str.toString();
+        int lastNickID = nickLastID();
+        if(memberModel != null) {
+            int resultSet = sqlAdapter.insert(
+                    sql, 2, lastNickID + 1, memberModel.nick, nick
+            );
+        }
+
     }
 
-    public void insertMember(String target) throws IOException, GeneralSecurityException, SQLException {
+    public void insertMember() throws IOException, GeneralSecurityException, SQLException {
         ReadSheets readSheets = new ReadSheets();
         List<String> name = readSheets.getSheetsData("name");
         List<String> branch = readSheets.getSheetsData("branch");
@@ -125,49 +137,37 @@ public class InsertMemberDB {
         List<Integer> debutConverted = boolConvert(debut);
         int id = lastID()+1;
 
+        String memberSQL = "INSERT INTO member_list (name,branch,debut3D,nick,social_media,illustrator,visual)\n" +
+                "VALUES (?, ?, ?, ?,?,?,?)";
+        int i = amount;
+        int member = sqlAdapter.insert(
+                memberSQL,2,name.get(i-1),branch.get(i-1),debutConverted.get(i-1),id,id,illustrator.get(i-1),visual.get(i-1)
+        );
 
-
-        if(target.equalsIgnoreCase("member")){
-            
-            String memberSQL = "INSERT INTO member_list (name,branch,debut3D,nick,social_media,illustrator,visual)\n" +
-                    "VALUES (?, ?, ?, ?,?,?,?)";
-            int i = amount;
-            int resultSet = sqlAdapter.insert(
-                    memberSQL,2,name.get(i-1),branch.get(i-1),debutConverted.get(i-1),id,id,illustrator.get(i-1),visual.get(i-1)
-            );
-
-        }
-        if(target.equalsIgnoreCase("nickname")) {
-            int maxNick = nickLastID();
-            if(nickname.size()!=0) {
-                String nicknameSQL = "INSERT INTO nickname (id_real,nick_id, nickname)\n" +
-                        "VALUES (?,?,?)";
-                int i = amount - 1;
-                List<String> nicks = nickList(nickname.get(i));
-                for(String nck : nicks) {
-                    if(nck.equalsIgnoreCase("-")) {
-                        break;
-                    }
-                    else {
-                        int resultSet = sqlAdapter.insert(
-                                nicknameSQL,2, maxNick+1, lastID() ,nck
-                        );
-                    }
-
-
+        int maxNick = nickLastID();
+        if(nickname.size()!=0) {
+            String nicknameSQL = "INSERT INTO nickname (id_real,nick_id, nickname)\n" +
+                    "VALUES (?,?,?)";
+            int j = amount - 1;
+            List<String> nicks = nickList(nickname.get(j));
+            for(String nck : nicks) {
+                if(nck.equalsIgnoreCase("-")) {
+                    break;
+                }
+                else {
+                    int nick = sqlAdapter.insert(
+                            nicknameSQL,2, maxNick+1, lastID() ,nck
+                    );
                 }
             }
         }
-        if(target.equalsIgnoreCase("social")){
-            String socialSQL = "INSERT INTO social (social_id,bilibili,facebook,instagram,twitch,twitter,youtube)\n" +
-                    "VALUES (?, ?, ?, ?,?,?,?)";
-            int i = amount-1;
-            int resultSet = sqlAdapter.insert(
-                    socialSQL,2,lastID(),bilibil.get(i),facebook.get(i),instagram.get(i),twitch.get(i),twitter.get(i),youtube.get(i)
-            );
-        }
 
-
+        String socialSQL = "INSERT INTO social (social_id,bilibili,facebook,instagram,twitch,twitter,youtube)\n" +
+                "VALUES (?, ?, ?, ?,?,?,?)";
+        int k = amount-1;
+        int resultSet = sqlAdapter.insert(
+                socialSQL,2,lastID(),bilibil.get(k),facebook.get(k),instagram.get(k),twitch.get(k),twitter.get(k),youtube.get(k)
+        );
 
 
     }
