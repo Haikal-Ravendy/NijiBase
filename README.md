@@ -1,4 +1,4 @@
-# NijiCord
+# NijiBase
 A Discord Bot that run Nijisanji Liver's Database. 
 
 ## Features
